@@ -239,6 +239,7 @@ var commentForm = {
     'insertComment': function (response) {
         var section = this.form.closest('section').siblings('section.todolist-comments');
         var emptyComment = section.find('article.todolist-comment-hidden').clone();
+        emptyComment.removeClass('todolist-comment-hidden').addClass('todolist-comment');
         emptyComment.find('.todolist-comment-name').text(this.form.find('input[name="name"]').val());
         emptyComment.find('.todolist-comment-comment').text(this.form.find('textarea[name="comment"]').val());
         emptyComment.find('.todolist-comment-date').text(response);
