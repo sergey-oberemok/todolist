@@ -11,6 +11,9 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'IndexController@index');
+
+Route::post('/task/create', 'TaskController@create');
+Route::post('/task/edit/done/{id}', 'TaskController@editDone');
+Route::get('/task/show/{id}', 'TaskController@show');
+Route::post('/comment/create/{taskId}', 'CommentController@create');

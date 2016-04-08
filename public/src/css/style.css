@@ -1,0 +1,13 @@
+.todolist-tasks .todolist-task {
+  padding: 5px 0; }
+  .todolist-tasks .todolist-task:nth-child(odd) {
+    background-color: #f2f2f2; }
+.todolist-tasks .todolist-task.todolist-task-done a {
+  text-decoration: line-through; }
+
+.todolist-comments .todolist-comment {
+  padding: 5px 0; }
+  .todolist-comments .todolist-comment:nth-child(odd) {
+    background-color: #f2f2f2; }
+
+/*# sourceMappingURL=style.css.map */
