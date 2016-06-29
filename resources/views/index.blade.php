@@ -12,6 +12,8 @@
          @include('includes.tasks')
 
          @include('includes.task-create')
+
+         @include('includes.text')
       </div>
       <!-- /.container-fluid -->
    </section>
