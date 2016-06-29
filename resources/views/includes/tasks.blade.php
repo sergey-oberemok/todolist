@@ -85,6 +85,11 @@
             0
          </div>
          <!-- /.form-group -->
+         <div class="col-sm-<?= $colSmRemove; ?>">
+            <span class="glyphicon glyphicon-minus" onclick="removeTask(event, '{{action('TaskController@remove', ['id' => $task->id])}}')"></span>
+            <!-- /.glyphicon glyphicon-minus -->
+         </div>
+         <!-- /.col-sm- -->
       </div>
       <!-- /.row -->
    </article>
