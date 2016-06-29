@@ -117,18 +117,6 @@ var taskCreateForm = {
         var tasksFirst = sectionTasks.find('article.todolist-task').not('.todolist-task-done');
         if (tasksFirst.length > 0) {
             insertByComparingDates(tasksFirst, emptyTask);
-            //tasksFirst.each(function (index, element) {
-            //    var $element = $(element);
-            //    var deadline = new Date($element.find('.todolist-task-deadline').text());
-            //    var deadlineNew = new Date(that.deadline.val());
-            //    if (deadlineNew < deadline) {
-            //        $element.before(emptyTask);
-            //        return false;
-            //    }
-            //    if(index == tasksFirst.length - 1){
-            //        $element.after(emptyTask);
-            //    }
-            //});
         } else if (sectionTasks.find('article.todolist-task-done').length > 0) {
             sectionTasks.find('article.todolist-task-done').first().before(emptyTask);
         } else {
