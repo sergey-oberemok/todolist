@@ -39,4 +39,14 @@ class TaskController extends Controller
         $array = array('task' => $task->toArray(), 'comments' => $comments->toArray());
         return View('task', $array);
     }
+
+    // remove task
+    public function remove($id){
+        Task::where('id', $id)->delete();
+        Comment::where('task_id', $id)->delete();
+        if(Request::ajax()){
+            return 'true';
+        }
+        return true;
+    }
 }

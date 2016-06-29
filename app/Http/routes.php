@@ -14,6 +14,7 @@
 Route::get('/', 'IndexController@index');
 
 Route::post('/task/create', 'TaskController@create');
+Route::post('/task/remove/{id}', 'TaskController@remove');
 Route::post('/task/edit/done/{id}', 'TaskController@editDone');
 Route::get('/task/show/{id}', 'TaskController@show');
 Route::post('/comment/create/{taskId}', 'CommentController@create');

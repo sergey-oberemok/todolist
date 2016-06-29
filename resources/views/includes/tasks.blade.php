@@ -2,9 +2,10 @@
    <div class="row">
       <?php
       $colSmDone = 1;
-      $colSmTask = 7;
+      $colSmTask = 6;
       $colSmDeadline = 3;
       $colSmComments = 1;
+         $colSmRemove = 1;
       ?>
       <div class="col-sm-<?= $colSmDone; ?>">
          Done
@@ -22,6 +23,10 @@
          Comments
       </div>
       <!-- /.col-sm -->
+      <div class="col-sm-<?= $colSmRemove; ?>">
+         Remove
+      </div>
+      <!-- /.col-sm- -->
    </div>
    <!-- /.row -->
 </section>
@@ -49,6 +54,11 @@
                {{$task->comments}}
             </div>
             <!-- /.form-group -->
+            <div class="col-sm-<?= $colSmRemove; ?>">
+               <span class="glyphicon glyphicon-minus" onclick="removeTask(event, '{{action('TaskController@remove', ['id' => $task->id])}}')"></span>
+               <!-- /.glyphicon glyphicon-minus -->
+            </div>
+            <!-- /.col-sm- -->
          </div>
          <!-- /.row -->
       </article>

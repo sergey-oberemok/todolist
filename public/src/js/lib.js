@@ -238,3 +238,11 @@ var commentForm = {
         this.form.get(0).reset();
     }
 };
+
+function removeTask(event, url){
+    var $task = $(event.target).closest('article.todolist-task');
+    $.post(url, {'_token': getToken($task)}, function(response){
+        $task.slideUp('slow');
+        $task.remove();
+    });
+}
