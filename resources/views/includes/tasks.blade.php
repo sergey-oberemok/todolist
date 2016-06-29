@@ -5,7 +5,7 @@
       $colSmTask = 6;
       $colSmDeadline = 3;
       $colSmComments = 1;
-         $colSmRemove = 1;
+      $colSmRemove = 1;
       ?>
       <div class="col-sm-<?= $colSmDone; ?>">
          Done
@@ -55,7 +55,8 @@
             </div>
             <!-- /.form-group -->
             <div class="col-sm-<?= $colSmRemove; ?>">
-               <span class="glyphicon glyphicon-minus" onclick="removeTask(event, '{{action('TaskController@remove', ['id' => $task->id])}}')"></span>
+               <span class="glyphicon glyphicon-minus"
+                     onclick="removeTask(event, '{{action('TaskController@remove', ['id' => $task->id])}}')"></span>
                <!-- /.glyphicon glyphicon-minus -->
             </div>
             <!-- /.col-sm- -->
@@ -86,7 +87,8 @@
          </div>
          <!-- /.form-group -->
          <div class="col-sm-<?= $colSmRemove; ?>">
-            <span class="glyphicon glyphicon-minus" onclick="removeTask(event, '{{action('TaskController@remove', ['id' => $task->id])}}')"></span>
+            <span class="glyphicon glyphicon-minus"
+                  onclick="removeTask(event, '{{action('TaskController@remove', ['id' => 'task_id'])}}')"></span>
             <!-- /.glyphicon glyphicon-minus -->
          </div>
          <!-- /.col-sm- -->
